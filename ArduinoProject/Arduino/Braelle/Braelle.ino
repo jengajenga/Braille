@@ -80,166 +80,79 @@ void interpretChar(char c) {
   
   bool PWMloc[MAXPWM];
 
-  // Find the letter we have
-  if(c == 'a') { 
+  if(c == 'I') { // the i sound in "ship" pronounced: eəɪ
 
-    // This is the format of the Braelle grid
-    // A 1 means turn on the motor associated with this position
-    // A 0 means do nothing
-    PWMloc[0] = 1;      PWMloc[1] = 0;
+    PWMloc[0] = 0;      PWMloc[1] = 1;
     PWMloc[2] = 0;      PWMloc[3] = 0;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
+    PWMloc[4] = 1;      PWMloc[5] = 0;
   } 
-  
-  else if(c == 'b') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 1;      PWMloc[3] = 0;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'c') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 0;      PWMloc[3] = 0;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'd') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 0;      PWMloc[3] = 1;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'e') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 0;      PWMloc[3] = 1;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'f') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 0;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'g') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'h') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
-    PWMloc[4] = 0;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'i') {
+
+ else if(c == 'i') { //the e sound in "sheep" pronounced eəɪii
     PWMloc[0] = 0;      PWMloc[1] = 1;
     PWMloc[2] = 1;      PWMloc[3] = 0;
     PWMloc[4] = 0;      PWMloc[5] = 0;
   }
   
-  else if(c == 'j') {
-    PWMloc[0] = 0;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
+    PWMloc[2] = 0;      PWMloc[3] = 0;
     PWMloc[4] = 0;      PWMloc[5] = 0;
   }
   
-  else if(c == 'k') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
     PWMloc[2] = 0;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
   }
-  
-  else if(c == 'l') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 1;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'm') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
     PWMloc[2] = 0;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
   }
-  
-  else if(c == 'n') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 0;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'o') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 0;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'p') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'q') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'r') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 's') {
-    PWMloc[0] = 0;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 't') {
-    PWMloc[0] = 0;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 0;
-  }
-  
-  else if(c == 'u') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
     PWMloc[2] = 0;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 1;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
   }
-  
-  else if(c == 'v') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 1;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 1;
-  }
-  
-  else if(c == 'w') {
-    PWMloc[0] = 0;      PWMloc[1] = 1;
-    PWMloc[2] = 1;      PWMloc[3] = 1;
-    PWMloc[4] = 0;      PWMloc[5] = 1;
-  }
-  
-  else if(c == 'x') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
     PWMloc[2] = 0;      PWMloc[3] = 0;
-    PWMloc[4] = 1;      PWMloc[5] = 1;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
   }
-  
-  else if(c == 'y') {
-    PWMloc[0] = 1;      PWMloc[1] = 1;
-    PWMloc[2] = 0;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 1;
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
+    PWMloc[2] = 0;      PWMloc[3] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
   }
-  
-  else if(c == 'z') {
-    PWMloc[0] = 1;      PWMloc[1] = 0;
-    PWMloc[2] = 0;      PWMloc[3] = 1;
-    PWMloc[4] = 1;      PWMloc[5] = 1;
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
+    PWMloc[2] = 0;      PWMloc[3] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
   }
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
+    PWMloc[2] = 0;      PWMloc[3] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
+  }
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
+    PWMloc[2] = 0;      PWMloc[3] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
+  }
+    
+ else if(c == 'i') { 
+    PWMloc[0] = 0;      PWMloc[1] = 0;
+    PWMloc[2] = 0;      PWMloc[3] = 0;
+    PWMloc[4] = 0;      PWMloc[5] = 0;
+  }
+
 
   sendPWM(PWMloc);
 }
